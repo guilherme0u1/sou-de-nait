@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpmvvqqqsjkl8"]
+
+[ext_resource type="Texture2D" uid="uid://d3qkhwyvmk23s" path="res://sprites/character/character_body.png" id="1_prsti"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2qm5x"]
+radius = 12.0
+height = 34.0
+
+[node name="Character" type="CharacterBody2D"]
+
+[node name="Textures" type="Node2D" parent="."]
+
+[node name="BodyTexture" type="Sprite2D" parent="Textures"]
+texture_filter = 1
+texture = ExtResource("1_prsti")
+hframes = 14
+
+[node name="ScarfTexture" type="Sprite2D" parent="Textures"]
+
+[node name="UnderpartTexture" type="Sprite2D" parent="Textures"]
+
+[node name="ArmTexture" type="Sprite2D" parent="Textures"]
+
+[node name="EyeTexture" type="Sprite2D" parent="Textures"]
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_2qm5x")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6jngplwe3t1g"]
+
+[ext_resource type="Script" path="res://autoload/sound_player/sound_player.gd" id="1_1nic3"]
+[ext_resource type="AudioStream" uid="uid://2y0uttun1kb2" path="res://sounds/button.wav" id="1_4v3oc"]
+
+[node name="SoundPlayer" type="Node"]
+script = ExtResource("1_1nic3")
+
+[node name="ButtonHoverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_4v3oc")
+pitch_scale = 2.7
+
+[node name="ButtonClickedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_4v3oc")
+pitch_scale = 1.7
